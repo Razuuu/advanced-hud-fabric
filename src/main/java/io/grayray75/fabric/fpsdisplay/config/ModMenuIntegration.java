@@ -1,13 +1,19 @@
 package io.grayray75.fabric.fpsdisplay.config;
 
-import io.github.prospector.modmenu.api.ConfigScreenFactory;
 import io.github.prospector.modmenu.api.ModMenuApi;
-import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
+import io.grayray75.fabric.fpsdisplay.FpsDisplayMod;
+import net.minecraft.client.gui.screen.Screen;
+
+import java.util.function.Function;
 
 public class ModMenuIntegration implements ModMenuApi {
+    @Override
+    public Function<Screen, ? extends Screen> getConfigScreenFactory() {
+        return OptionScreen::new;
+    }
 
     @Override
-    public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(FpsDisplayConfig.class, parent).get();
+    public String getModId() {
+        return FpsDisplayMod.MOD_ID;
     }
 }
