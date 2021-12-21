@@ -32,6 +32,9 @@ dependencies {
     }
 
     modImplementation "net.legacyfabric.legacy-fabric-api:legacy-fabric-api:${fabric_version}"
+    //includeFabricApiModule "fabric-key-binding-api-v1"
+    //includeFabricApiModule "fabric-lifecycle-events-v1"
+
     modImplementation "io.github.boogiemonster1o1:modmenu:${modmenu_version}"
 
     // Hacks that make mac os work
@@ -53,6 +56,12 @@ if (System.getProperty("os.name").toLowerCase().contains("mac")) {
             force 'org.lwjgl.lwjgl:lwjgl-platform:2.9.4-nightly-20150209'
         }
     }
+}
+
+def includeFabricApiModule(String moduleName) {
+    Object dependency = fabricApi.module(moduleName, project.fabric_version)
+    dependencies.modImplementation(dependency)
+    dependencies.include(dependency)
 }
 
 processResources {
