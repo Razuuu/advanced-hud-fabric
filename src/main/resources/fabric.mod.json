@@ -27,7 +27,7 @@
         "fpsdisplay.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.9.0",
+        "fabricloader": ">=0.12.0",
         "minecraft": "1.8.9",
         "legacy-fabric-keybinding-api-v1": "*"
     }
