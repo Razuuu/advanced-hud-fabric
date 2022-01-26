@@ -31,15 +31,15 @@ public class InGameHudMixin {
             int textPosY = config.offsetTop;
 
             Window window = new Window(client);
-            double guiScale = window.method_2469();
+            double guiScale = window.getScaleFactor();
             if (guiScale > 0) {
                 textPosX /= guiScale;
                 textPosY /= guiScale;
             }
 
             // Prevent FPS-Display to render outside screenspace
-            int maxTextPosX = window.getScaledWidth() - client.textRenderer.getStringWidth(displayString);
-            int maxTextPosY = window.getScaledHeight() - client.textRenderer.fontHeight;
+            int maxTextPosX = (int) window.getScaledWidth() - client.textRenderer.getStringWidth(displayString);
+            int maxTextPosY = (int) window.getScaledHeight() - client.textRenderer.fontHeight;
             textPosX = Math.min(textPosX, maxTextPosX);
             textPosY = Math.min(textPosY, maxTextPosY);
 

@@ -24,17 +24,11 @@ minecraft {
 
 dependencies {
     // To change the versions see the gradle.properties file
-    implementation "com.google.guava:guava:23.5-jre"
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-    modImplementation ("net.fabricmc:fabric-loader-1.8.9:${project.loader_version}") {
-        exclude module: "guava"
-    }
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.legacyfabric.legacy-fabric-api:legacy-fabric-api:${fabric_version}"
-    //includeFabricApiModule "fabric-key-binding-api-v1"
-    //includeFabricApiModule "fabric-lifecycle-events-v1"
-
     modImplementation "io.github.boogiemonster1o1:modmenu:${modmenu_version}"
 
     // Hacks that make mac os work
@@ -56,12 +50,6 @@ if (System.getProperty("os.name").toLowerCase().contains("mac")) {
             force 'org.lwjgl.lwjgl:lwjgl-platform:2.9.4-nightly-20150209'
         }
     }
-}
-
-def includeFabricApiModule(String moduleName) {
-    Object dependency = fabricApi.module(moduleName, project.fabric_version)
-    dependencies.modImplementation(dependency)
-    dependencies.include(dependency)
 }
 
 processResources {

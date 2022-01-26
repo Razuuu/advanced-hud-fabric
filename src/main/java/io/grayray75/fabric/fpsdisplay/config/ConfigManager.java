@@ -1,12 +1,17 @@
 package io.grayray75.fabric.fpsdisplay.config;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import io.grayray75.fabric.fpsdisplay.FpsDisplayMod;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.*;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class ConfigManager {
 
+    private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
     private static FpsDisplayConfig config;
 
     public static FpsDisplayConfig getConfig() {
@@ -14,16 +19,15 @@ public class ConfigManager {
     }
 
     private static File getConfigFile() {
-        return new File(FabricLoader.getInstance().getConfigDirectory(), FpsDisplayMod.MOD_ID + ".json");
+        Path path = Paths.get(FabricLoader.getInstance().getConfigDir().toString(), FpsDisplayMod.MOD_ID + ".json");
+        return new File(path.toString());
     }
 
     public static void loadConfig() {
-        File file = getConfigFile();
-
         try {
-            BufferedReader br = new BufferedReader(new FileReader(file));
+            BufferedReader br = new BufferedReader(new FileReader(getConfigFile()));
+            FpsDisplayConfig parsed = gson.fromJson(br, FpsDisplayConfig.class);
 
-            FpsDisplayConfig parsed = FpsDisplayMod.GSON.fromJson(br, FpsDisplayConfig.class);
             if (parsed != null) {
                 config = parsed;
             }
@@ -39,9 +43,8 @@ public class ConfigManager {
     }
 
     public static void saveConfig() {
-        String jsonString = FpsDisplayMod.GSON.toJson(config);
-
         try {
+            String jsonString = gson.toJson(config);
             FileWriter fileWriter = new FileWriter(getConfigFile());
             fileWriter.write(jsonString);
             fileWriter.flush();
