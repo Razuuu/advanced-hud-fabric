@@ -19,7 +19,7 @@ public class ConfigManager {
     }
 
     private static File getConfigFile() {
-        Path path = Paths.get(FabricLoader.getInstance().getConfigDir().toString(), FpsDisplayMod.MOD_ID + ".json");
+        Path path = Paths.get(FabricLoader.getInstance().getConfigDirectory().toString(), FpsDisplayMod.MOD_ID + ".json");
         return new File(path.toString());
     }
 

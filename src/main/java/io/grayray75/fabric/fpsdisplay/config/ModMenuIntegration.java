@@ -1,5 +1,5 @@
 package io.grayray75.fabric.fpsdisplay.config;
-
+/*
 import io.github.prospector.modmenu.api.ModMenuApi;
 import io.grayray75.fabric.fpsdisplay.FpsDisplayMod;
 import net.minecraft.client.gui.screen.Screen;
@@ -16,4 +16,4 @@ public class ModMenuIntegration implements ModMenuApi {
     public String getModId() {
         return FpsDisplayMod.MOD_ID;
     }
-}
+}*/
