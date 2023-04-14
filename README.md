@@ -1,4 +1,4 @@
-# Better Ping Display - Fabric Edition
+## Better Ping Display - Fabric Edition
 
 A [Fabric](https://fabricmc.net/) HUD mod (e.g FPS, coordinates)
 
@@ -13,7 +13,7 @@ Download `Advanced-HUD-Fabric-x.x.x.jar` from [here](https://github.com/Razuuu/a
 
 __If you have a [ModMenu](https://modrinth.com/mod/modmenu) installed, you can edit mod's config using it.__
 
-This mod's config file is `fpsdisplay.json`.
+This mod's config file is `advancedhud.json`.
 
 ## Supported Minecraft Versions
 * **1.8.9** Currently Broken
