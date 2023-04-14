@@ -1,0 +1,13 @@
+{
+    "text.autoconfig.advancedhud.title": "Advanced-HUD",
+    "text.autoconfig.advancedhud.option.enabled": "Aktiv",
+    "text.autoconfig.advancedhud.option.drawWithShadows": "Textschatten",
+    "text.autoconfig.advancedhud.option.textSize": "Textgröße",
+    "text.autoconfig.advancedhud.option.textColor": "Textfarbe",
+    "text.autoconfig.advancedhud.option.textAlpha": "Textsichtbarkeit",
+    "text.autoconfig.advancedhud.option.offsetTop": "Abstand von oben",
+    "text.autoconfig.advancedhud.option.offsetLeft": "Abstand von links",
+    "text.autoconfig.advancedhud.option.holdKeyToShowFps": "'Taste halten für HUD-Anzeige'-Modus",
+    "key.advancedhud.category": "Advanced-HUD",
+    "key.advancedhud.toggleFpsOverlay": "HUD Overlay umschalten"
+}
