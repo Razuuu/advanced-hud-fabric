@@ -16,7 +16,7 @@ import org.lwjgl.glfw.GLFW;
 @Environment(EnvType.CLIENT)
 public class AdvancedHudMod implements ClientModInitializer {
 
-    public static Boolean SHOW_FPS_OVERLAY;
+    public static Boolean SHOW_HUD_OVERLAY;
     public static AdvancedHudConfig CONFIG;
 
     @Override
@@ -25,7 +25,7 @@ public class AdvancedHudMod implements ClientModInitializer {
 
         AutoConfig.register(AdvancedHudConfig.class, GsonConfigSerializer::new);
         CONFIG = AutoConfig.getConfigHolder(AdvancedHudConfig.class).getConfig();
-        SHOW_FPS_OVERLAY = CONFIG.enabled;
+        SHOW_HUD_OVERLAY = CONFIG.enabled;
 
         KeyBinding binding_toggleOverlay = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.advancedhud.toggleFpsOverlay", InputUtil.Type.KEYSYM, GLFW.GLFW_DONT_CARE, "key.advancedhud.category"));
 
@@ -34,9 +34,9 @@ public class AdvancedHudMod implements ClientModInitializer {
                 CONFIG.enabled = !CONFIG.enabled;
             }
             if (CONFIG.holdKeyToShowFps) {
-                SHOW_FPS_OVERLAY = binding_toggleOverlay.isPressed();
+                SHOW_HUD_OVERLAY = binding_toggleOverlay.isPressed();
             } else {
-                SHOW_FPS_OVERLAY = CONFIG.enabled;
+                SHOW_HUD_OVERLAY = CONFIG.enabled;
             }
         });
     }

@@ -19,9 +19,14 @@ public class InGameHudMixin {
         MinecraftClient client = MinecraftClient.getInstance();
         AdvancedHudConfig config = AdvancedHudMod.CONFIG;
 
-        if (!client.options.debugEnabled && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_FPS_OVERLAY) {
+        if (!client.options.debugEnabled && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_HUD_OVERLAY) {
 
-            String displayString = ((MinecraftClientMixin) client).getCurrentFPS() + " FPS";
+
+            String displayString = ((MinecraftClientMixin) client).getCurrentFPS() + " FPS -"
+                    + " X: " + Math.round(client.player.getX())
+                    + " | Y: " + Math.round(client.player.getY())
+                    + " | Z: " + Math.round(client.player.getZ());
+
             float textPosX = config.offsetLeft;
             float textPosY = config.offsetTop;
 
@@ -31,7 +36,7 @@ public class InGameHudMixin {
                 textPosY /= guiScale;
             }
 
-            // Prevent FPS-Display to render outside screenspace
+            // Prevent Advanced-HUD to render outside screenspace
             float maxTextPosX = client.getWindow().getScaledWidth() - client.textRenderer.getWidth(displayString);
             float maxTextPosY = client.getWindow().getScaledHeight() - client.textRenderer.fontHeight;
             textPosX = Math.min(textPosX, maxTextPosX);
