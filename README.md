@@ -1,13 +1,14 @@
-## Better Ping Display - Fabric Edition
+## Advanced HUD - Fabric Edition
 
 A [Fabric](https://fabricmc.net/) HUD mod (e.g FPS, coordinates)
 
+![](https://share.razuuu.de/i/J.SgqBk.png)
 
 This is a client-side mod.
 
 ## Download mod from releases
 
-Download `Advanced-HUD-Fabric-x.x.x.jar` from [here](https://github.com/Razuuu/advanced-hud-fabric/releases) and paste it to you're mods folder.
+Download `advanced-hud-fabric-x.x.x+x.x.x.jar` from [here](https://github.com/Razuuu/advanced-hud-fabric/releases) and paste it to you're mods folder.
 
 ## Configuration
 
