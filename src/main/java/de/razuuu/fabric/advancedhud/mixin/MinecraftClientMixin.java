@@ -1,4 +1,4 @@
-package io.grayray75.fabric.fpsdisplay.mixin;
+package de.razuuu.fabric.advancedhud.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

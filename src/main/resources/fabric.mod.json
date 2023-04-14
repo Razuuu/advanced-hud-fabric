@@ -1,34 +1,34 @@
 {
     "schemaVersion": 1,
-    "id": "fpsdisplay",
+    "id": "advancedhud",
     "version": "${version}",
-    "name": "FPS-Display",
+    "name": "Advanced-HUD",
     "description": "This mod shows your current FPS on screen.",
     "authors": [
-        "Grayray75"
+        "Razuuu"
     ],
     "contact": {
-        "homepage": "https://github.com/Grayray75/FPS-Display",
-        "sources": "https://github.com/Grayray75/FPS-Display",
-        "issues": "https://github.com/Grayray75/FPS-Display/issues"
+        "homepage": "https://www.razuuu.de",
+        "sources": "https://github.com/Razuuu/advanced-hud-fabric",
+        "issues": "https://github.com/Razuuu/advanced-hud-fabric/issues"
     },
     "license": "LGPL-3.0",
-    "icon": "assets/fpsdisplay/icon.png",
+    "icon": "assets/advancedhud/icon.png",
     "environment": "client",
     "entrypoints": {
         "client": [
-            "io.grayray75.fabric.fpsdisplay.FpsDisplayMod"
+            "de.razuuu.fabric.advancedhud.FpsDisplayMod"
         ],
         "modmenu": [
-            "io.grayray75.fabric.fpsdisplay.config.ModMenuIntegration"
+            "de.razuuu.fabric.advancedhud.config.ModMenuIntegration"
         ]
     },
     "mixins": [
-        "fpsdisplay.mixins.json"
+        "advancedhud.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.14.0",
-        "minecraft": "1.19.x",
+        "fabricloader": ">=0.14",
+        "minecraft": ">=1.19.4",
         "fabric-key-binding-api-v1": "*",
         "fabric-lifecycle-events-v1": "*"
     }

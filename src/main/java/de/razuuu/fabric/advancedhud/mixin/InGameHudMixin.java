@@ -1,7 +1,7 @@
-package io.grayray75.fabric.fpsdisplay.mixin;
+package de.razuuu.fabric.advancedhud.mixin;
 
-import io.grayray75.fabric.fpsdisplay.FpsDisplayMod;
-import io.grayray75.fabric.fpsdisplay.config.FpsDisplayConfig;
+import de.razuuu.fabric.advancedhud.AdvancedHudMod;
+import de.razuuu.fabric.advancedhud.config.AdvancedHudConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.hud.InGameHud;
@@ -17,9 +17,9 @@ public class InGameHudMixin {
     @Inject(at = @At("TAIL"), method = "render")
     public void render(MatrixStack matrixStack, float tickDelta, CallbackInfo info) {
         MinecraftClient client = MinecraftClient.getInstance();
-        FpsDisplayConfig config = FpsDisplayMod.CONFIG;
+        AdvancedHudConfig config = AdvancedHudMod.CONFIG;
 
-        if (!client.options.debugEnabled && config.enabled && config.textAlpha > 3 && FpsDisplayMod.SHOW_FPS_OVERLAY) {
+        if (!client.options.debugEnabled && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_FPS_OVERLAY) {
 
             String displayString = ((MinecraftClientMixin) client).getCurrentFPS() + " FPS";
             float textPosX = config.offsetLeft;

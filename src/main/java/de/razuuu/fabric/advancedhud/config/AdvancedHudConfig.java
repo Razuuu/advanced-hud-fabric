@@ -1,11 +1,11 @@
-package io.grayray75.fabric.fpsdisplay.config;
+package de.razuuu.fabric.advancedhud.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 
-@Config(name = "fpsdisplay")
-public class FpsDisplayConfig implements ConfigData {
+@Config(name = "advancedhud")
+public class AdvancedHudConfig implements ConfigData {
 
     public boolean enabled = true;
 

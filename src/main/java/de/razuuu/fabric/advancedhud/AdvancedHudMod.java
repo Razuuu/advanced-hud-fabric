@@ -1,6 +1,6 @@
-package io.grayray75.fabric.fpsdisplay;
+package de.razuuu.fabric.advancedhud;
 
-import io.grayray75.fabric.fpsdisplay.config.FpsDisplayConfig;
+import de.razuuu.fabric.advancedhud.config.AdvancedHudConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
@@ -14,20 +14,20 @@ import org.apache.logging.log4j.LogManager;
 import org.lwjgl.glfw.GLFW;
 
 @Environment(EnvType.CLIENT)
-public class FpsDisplayMod implements ClientModInitializer {
+public class AdvancedHudMod implements ClientModInitializer {
 
     public static Boolean SHOW_FPS_OVERLAY;
-    public static FpsDisplayConfig CONFIG;
+    public static AdvancedHudConfig CONFIG;
 
     @Override
     public void onInitializeClient() {
-        LogManager.getLogger().info("Initializing FPS-Display Mod");
+        LogManager.getLogger().info("Initializing Advanced-HUD Mod");
 
-        AutoConfig.register(FpsDisplayConfig.class, GsonConfigSerializer::new);
-        CONFIG = AutoConfig.getConfigHolder(FpsDisplayConfig.class).getConfig();
+        AutoConfig.register(AdvancedHudConfig.class, GsonConfigSerializer::new);
+        CONFIG = AutoConfig.getConfigHolder(AdvancedHudConfig.class).getConfig();
         SHOW_FPS_OVERLAY = CONFIG.enabled;
 
-        KeyBinding binding_toggleOverlay = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.fpsdisplay.toggleFpsOverlay", InputUtil.Type.KEYSYM, GLFW.GLFW_DONT_CARE, "key.fpsdisplay.category"));
+        KeyBinding binding_toggleOverlay = KeyBindingHelper.registerKeyBinding(new KeyBinding("key.advancedhud.toggleFpsOverlay", InputUtil.Type.KEYSYM, GLFW.GLFW_DONT_CARE, "key.advancedhud.category"));
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (binding_toggleOverlay.wasPressed() && !CONFIG.holdKeyToShowFps) {

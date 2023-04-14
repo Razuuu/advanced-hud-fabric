@@ -1,5 +1,5 @@
 {
-    "text.autoconfig.fpsdisplay.title": "FPS-Display",
+    "text.autoconfig.fpsdisplay.title": "Advanced-HUD",
     "text.autoconfig.fpsdisplay.option.enabled": "Enabled",
     "text.autoconfig.fpsdisplay.option.drawWithShadows": "Text shadows",
     "text.autoconfig.fpsdisplay.option.textSize": "Text size",
@@ -7,7 +7,7 @@
     "text.autoconfig.fpsdisplay.option.textAlpha": "Text visibility",
     "text.autoconfig.fpsdisplay.option.offsetTop": "Top offset",
     "text.autoconfig.fpsdisplay.option.offsetLeft": "Left offset",
-    "text.autoconfig.fpsdisplay.option.holdKeyToShowFps": "'Hold key to show fps' Mode",
-    "key.fpsdisplay.category": "FPS-Display",
-    "key.fpsdisplay.toggleFpsOverlay": "Toggle FPS overlay"
+    "text.autoconfig.fpsdisplay.option.holdKeyToShowFps": "'Hold key to show hud' Mode",
+    "key.fpsdisplay.category": "Advanced-HUD",
+    "key.fpsdisplay.toggleFpsOverlay": "Toggle HUD overlay"
 }
