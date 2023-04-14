@@ -17,7 +17,7 @@
     "environment": "client",
     "entrypoints": {
         "client": [
-            "de.razuuu.fabric.advancedhud.FpsDisplayMod"
+            "de.razuuu.fabric.advancedhud.AdvancedHudMod"
         ],
         "modmenu": [
             "de.razuuu.fabric.advancedhud.config.ModMenuIntegration"
