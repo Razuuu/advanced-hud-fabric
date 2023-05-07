@@ -11,21 +11,21 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.List;
+
 @Mixin(InGameHud.class)
 public class InGameHudMixin {
-
     @Inject(at = @At("TAIL"), method = "render")
-    public void render(MatrixStack matrixStack, float tickDelta, CallbackInfo info) {
+    public void render(MatrixStack matrixStack, float tickDelta, CallbackInfo info) throws Exception {
         MinecraftClient client = MinecraftClient.getInstance();
         AdvancedHudConfig config = AdvancedHudMod.CONFIG;
 
         if (!client.options.debugEnabled && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_HUD_OVERLAY) {
-
-
-            String displayString = ((MinecraftClientMixin) client).getCurrentFPS() + " FPS -"
-                    + " X: " + Math.round(client.player.getX())
-                    + " | Y: " + Math.round(client.player.getY())
-                    + " | Z: " + Math.round(client.player.getZ());
+            assert client.player != null;
+            List<String> textLines = List.of(
+                    "FPS: " + ((MinecraftClientMixin) client).getCurrentFPS(),
+                    "Coordinates: " + Math.round(client.player.getX()) + " " + Math.round(client.player.getY()) + " " + Math.round(client.player.getZ())
+            );
 
             float textPosX = config.offsetLeft;
             float textPosY = config.offsetTop;
@@ -37,28 +37,43 @@ public class InGameHudMixin {
             }
 
             // Prevent Advanced-HUD to render outside screenspace
-            float maxTextPosX = client.getWindow().getScaledWidth() - client.textRenderer.getWidth(displayString);
+            String longestText = this.getLongestString(textLines);
+            float maxTextPosX = client.getWindow().getScaledWidth() - client.textRenderer.getWidth(longestText);
             float maxTextPosY = client.getWindow().getScaledHeight() - client.textRenderer.fontHeight;
             textPosX = Math.min(textPosX, maxTextPosX);
             textPosY = Math.min(textPosY, maxTextPosY);
 
             int textColor = ((config.textAlpha & 0xFF) << 24) | config.textColor;
 
-            this.renderText(matrixStack, client.textRenderer, displayString, textPosX, textPosY, textColor, config.textSize, config.drawWithShadows);
+            this.renderText(matrixStack, client.textRenderer, textLines, textPosX, textPosY, textColor, config.textSize, config.drawWithShadows);
         }
     }
 
-    private void renderText(MatrixStack matrixStack, TextRenderer textRenderer, String text, float x, float y, int color, float scale, boolean shadowed) {
+    private String getLongestString(List<String> textLines) {
+        return textLines
+                .stream()
+                .reduce("",
+                        (longestText, text) -> longestText.length() < text.length() ? text : longestText
+                );
+    }
+
+    private void renderText(MatrixStack matrixStack, TextRenderer textRenderer, List<String> textLines, float x, float y, int color, float scale, boolean shadowed) {
         matrixStack.push();
         matrixStack.translate(x, y, 0);
         matrixStack.scale(scale, scale, scale);
         matrixStack.translate(-x, -y, 0);
 
-        if (shadowed) {
-            textRenderer.drawWithShadow(matrixStack, text, x, y, color);
-        } else {
-            textRenderer.draw(matrixStack, text, x, y, color);
+        for (int i = 0; i < textLines.size(); i++) {
+            String text = textLines.get(i);
+            float yPos = y + i*(textRenderer.fontHeight + 5);
+
+            if (shadowed) {
+                textRenderer.drawWithShadow(matrixStack, text, x, yPos, color);
+            } else {
+                textRenderer.draw(matrixStack, text, x, yPos, color);
+            }
         }
+
         matrixStack.pop();
     }
 }
