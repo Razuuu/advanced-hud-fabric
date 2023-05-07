@@ -1,8 +1,8 @@
 ## Advanced HUD - Fabric Edition
 
-A [Fabric](https://fabricmc.net/) HUD mod (e.g FPS, coordinates)
+A [Fabric](https://fabricmc.net/) HUD mod (FPS, Coordinates and Ping)
 
-![](https://share.razuuu.de/i/J.SgqBk.png)
+![](https://share.razuuu.de/i/J.YzAui.png)
 
 This is a client-side mod.
 
