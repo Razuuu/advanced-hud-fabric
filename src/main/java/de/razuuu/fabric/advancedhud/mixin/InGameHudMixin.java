@@ -1,6 +1,7 @@
 package de.razuuu.fabric.advancedhud.mixin;
 
 import de.razuuu.fabric.advancedhud.AdvancedHudMod;
+import de.razuuu.fabric.advancedhud.Utils;
 import de.razuuu.fabric.advancedhud.config.AdvancedHudConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
@@ -24,7 +25,8 @@ public class InGameHudMixin {
             assert client.player != null;
             List<String> textLines = List.of(
                     "FPS: " + ((MinecraftClientMixin) client).getCurrentFPS(),
-                    "Coordinates: " + Math.round(client.player.getX()) + " " + Math.round(client.player.getY()) + " " + Math.round(client.player.getZ())
+                    "Coordinates: " + Math.round(client.player.getX()) + " " + Math.round(client.player.getY()) + " " + Math.round(client.player.getZ()),
+                    "Ping: " + Utils.getLocalPing()
             );
 
             float textPosX = config.offsetLeft;

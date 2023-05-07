@@ -3,7 +3,7 @@
     "id": "advancedhud",
     "version": "${version}",
     "name": "Advanced-HUD",
-    "description": "This mod shows a HUD (e.g FPS, coordinates) on screen.",
+    "description": "This mod shows a HUD (FPS, Coordinates and Ping) on screen.",
     "authors": [
         "Razuuu"
     ],
