@@ -1,4 +1,6 @@
 ## Advanced HUD - Fabric Edition
+[![Automatic Release](https://github.com/Razuuu/advanced-hud-fabric/actions/workflows/release.yaml/badge.svg)](https://github.com/Razuuu/advanced-hud-fabric/actions/workflows/release.yaml)
+[![Github All Releases](https://img.shields.io/github/downloads/Razuuu/advanced-hud-fabric/total.svg)]()
 
 A [Fabric](https://fabricmc.net/) HUD mod (FPS, Coordinates and Ping)
 
