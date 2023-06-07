@@ -1,13 +1,13 @@
 {
-    "text.autoconfig.fpsdisplay.title": "Advanced-HUD",
-    "text.autoconfig.fpsdisplay.option.enabled": "Enabled",
-    "text.autoconfig.fpsdisplay.option.drawWithShadows": "Text shadows",
-    "text.autoconfig.fpsdisplay.option.textSize": "Text size",
-    "text.autoconfig.fpsdisplay.option.textColor": "Text color",
-    "text.autoconfig.fpsdisplay.option.textAlpha": "Text visibility",
-    "text.autoconfig.fpsdisplay.option.offsetTop": "Top offset",
-    "text.autoconfig.fpsdisplay.option.offsetLeft": "Left offset",
-    "text.autoconfig.fpsdisplay.option.holdKeyToShowFps": "'Hold key to show hud' Mode",
-    "key.fpsdisplay.category": "Advanced-HUD",
-    "key.fpsdisplay.toggleFpsOverlay": "Toggle HUD overlay"
+    "text.autoconfig.advancedhud.title": "Advanced-HUD",
+    "text.autoconfig.advancedhud.option.enabled": "Enabled",
+    "text.autoconfig.advancedhud.option.drawWithShadows": "Text shadows",
+    "text.autoconfig.advancedhud.option.textSize": "Text size",
+    "text.autoconfig.advancedhud.option.textColor": "Text color",
+    "text.autoconfig.advancedhud.option.textAlpha": "Text visibility",
+    "text.autoconfig.advancedhud.option.offsetTop": "Top offset",
+    "text.autoconfig.advancedhud.option.offsetLeft": "Left offset",
+    "text.autoconfig.advancedhud.option.holdKeyToShowFps": "'Hold key to show hud' Mode",
+    "key.advancedhud.category": "Advanced-HUD",
+    "key.advancedhud.toggleFpsOverlay": "Toggle HUD overlay"
 }

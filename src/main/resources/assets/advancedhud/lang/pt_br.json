@@ -1,12 +1,13 @@
 {
-    "text.autoconfig.fpsdisplay.title": "Advanced-HUD",
-    "text.autoconfig.fpsdisplay.option.enabled": "Ativado",
-    "text.autoconfig.fpsdisplay.option.drawWithShadows": "Sombreamento do texto",
-    "text.autoconfig.fpsdisplay.option.textColor": "Cor do texto",
-    "text.autoconfig.fpsdisplay.option.textAlpha": "Visibilidade do texto",
-    "text.autoconfig.fpsdisplay.option.offsetTop": "Deslocamento no topo",
-    "text.autoconfig.fpsdisplay.option.offsetLeft": "Deslocamento na esquerda",
-    "text.autoconfig.fpsdisplay.option.holdKeyToShowFps": "Modo 'segure a tecla para exibir'",
-    "key.fpsdisplay.category": "Advanced-HUD",
-    "key.fpsdisplay.toggleFpsOverlay": "Mostrar/ocultar sobreposição de HUD"
+    "text.autoconfig.advancedhud.title": "Advanced-HUD",
+    "text.autoconfig.advancedhud.option.enabled": "Ativado",
+    "text.autoconfig.advancedhud.option.drawWithShadows": "Sombreamento do texto",
+    "text.autoconfig.advancedhud.option.textSize": "Tamanho do texto",
+    "text.autoconfig.advancedhud.option.textColor": "Cor do texto",
+    "text.autoconfig.advancedhud.option.textAlpha": "Visibilidade do texto",
+    "text.autoconfig.advancedhud.option.offsetTop": "Deslocamento no topo",
+    "text.autoconfig.advancedhud.option.offsetLeft": "Deslocamento na esquerda",
+    "text.autoconfig.advancedhud.option.holdKeyToShowFps": "Modo 'segure a tecla para exibir'",
+    "key.advancedhud.category": "Advanced-HUD",
+    "key.advancedhud.toggleFpsOverlay": "Mostrar/ocultar sobreposição de HUD"
 }
