@@ -4,7 +4,7 @@
 
 A [Fabric](https://fabricmc.net/) HUD mod (FPS, Coordinates and Ping)
 
-![](https://share.razuuu.de/i/J.YzAui.png)
+![](https://share.razuuu.de/i/J.qmB5T.png)
 
 This is a client-side mod.
 
