@@ -2,6 +2,7 @@
     "text.autoconfig.advancedhud.title": "Advanced-HUD",
     "text.autoconfig.advancedhud.option.enabled": "Enabled",
     "text.autoconfig.advancedhud.option.drawWithShadows": "Text shadows",
+    "text.autoconfig.advancedhud.option.textSpacing": "Text spacing",
     "text.autoconfig.advancedhud.option.textColor": "Text color",
     "text.autoconfig.advancedhud.option.textAlpha": "Text visibility",
     "text.autoconfig.advancedhud.option.offsetTop": "Top offset",

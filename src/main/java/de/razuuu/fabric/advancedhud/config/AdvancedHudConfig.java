@@ -11,6 +11,8 @@ public class AdvancedHudConfig implements ConfigData {
 
     public boolean drawWithShadows = false;
 
+    public int textSpacing = 5;
+
     @ConfigEntry.ColorPicker
     public int textColor = 0xEEEEEE;
 
