@@ -19,12 +19,8 @@ __If you have a [ModMenu](https://modrinth.com/mod/modmenu) installed, you can e
 This mod's config file is `advancedhud.json`.
 
 ## Supported Minecraft Versions
-* **1.8.9** Currently Broken
-* **1.15.x**
-* **1.16.x**
-* **1.17.x**
-* **1.18.x**
 * **1.19.x**
+* **1.20.x**
 
 ## Requirements
 * [Fabric](https://fabricmc.net/)

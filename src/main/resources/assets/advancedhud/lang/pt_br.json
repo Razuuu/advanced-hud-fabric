@@ -2,7 +2,6 @@
     "text.autoconfig.advancedhud.title": "Advanced-HUD",
     "text.autoconfig.advancedhud.option.enabled": "Ativado",
     "text.autoconfig.advancedhud.option.drawWithShadows": "Sombreamento do texto",
-    "text.autoconfig.advancedhud.option.textSize": "Tamanho do texto",
     "text.autoconfig.advancedhud.option.textColor": "Cor do texto",
     "text.autoconfig.advancedhud.option.textAlpha": "Visibilidade do texto",
     "text.autoconfig.advancedhud.option.offsetTop": "Deslocamento no topo",
