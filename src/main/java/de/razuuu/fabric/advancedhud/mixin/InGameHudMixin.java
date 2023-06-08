@@ -26,9 +26,9 @@ public class InGameHudMixin {
             double guiScale = client.getWindow().getScaleFactor();
 
             List<String> textLines = List.of(
-                    "FPS: " + ((MinecraftClientMixin) client).getCurrentFPS(),
-                    "Coordinates: " + Math.round(client.player.getX()) + " " + Math.round(client.player.getY()) + " " + Math.round(client.player.getZ()),
-                    "Ping: " + Utils.getLocalPing()
+                    config.fps + ((MinecraftClientMixin) client).getCurrentFPS(),
+                    config.coordinates + Math.round(client.player.getX()) + " " + Math.round(client.player.getY()) + " " + Math.round(client.player.getZ()),
+                    config.ping + Utils.getLocalPing()
             );
 
             // Prevent Advanced-HUD to render outside screenspace

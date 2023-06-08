@@ -9,5 +9,9 @@
     "text.autoconfig.advancedhud.option.offsetLeft": "Left offset",
     "text.autoconfig.advancedhud.option.holdKeyToShowFps": "'Hold key to show hud' Mode",
     "key.advancedhud.category": "Advanced-HUD",
-    "key.advancedhud.toggleFpsOverlay": "Toggle HUD overlay"
+    "key.advancedhud.toggleFpsOverlay": "Toggle HUD overlay",
+
+    "text.autoconfig.advancedhud.option.fps": "FPS",
+    "text.autoconfig.advancedhud.option.coordinates": "Coordinates",
+    "text.autoconfig.advancedhud.option.ping": "Ping"
 }

@@ -24,4 +24,9 @@ public class AdvancedHudConfig implements ConfigData {
     public int offsetLeft = 4;
 
     public boolean holdKeyToShowFps = false;
+
+    public String fps = "FPS: ";
+    public String coordinates = "Coordinates: ";
+    public String ping = "Ping: ";
+
 }

@@ -9,5 +9,9 @@
     "text.autoconfig.advancedhud.option.offsetLeft": "Abstand von links",
     "text.autoconfig.advancedhud.option.holdKeyToShowFps": "'Taste halten für HUD-Anzeige'-Modus",
     "key.advancedhud.category": "Advanced-HUD",
-    "key.advancedhud.toggleFpsOverlay": "HUD Overlay umschalten"
+    "key.advancedhud.toggleFpsOverlay": "HUD Overlay umschalten",
+
+    "text.autoconfig.advancedhud.option.fps": "FPS",
+    "text.autoconfig.advancedhud.option.coordinates": "Koordinaten",
+    "text.autoconfig.advancedhud.option.ping": "Ping"
 }
