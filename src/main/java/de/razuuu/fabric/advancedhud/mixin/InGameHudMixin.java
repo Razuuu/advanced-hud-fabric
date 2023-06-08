@@ -41,7 +41,7 @@ public class InGameHudMixin {
 
             for (int i = 0; i < textLines.size(); i++) {
                 String line = textLines.get(i);
-                int linePosY = textPosY + (i * client.textRenderer.fontHeight + config.textSpacing);
+                int linePosY = textPosY + i*(client.textRenderer.fontHeight + config.textSpacing);
                 context.drawText(client.textRenderer, line, textPosX, linePosY, textColor, config.drawWithShadows);
             }
         }
