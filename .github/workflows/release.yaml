@@ -28,6 +28,9 @@ jobs:
       - name: Execute Gradle Build
         run: ./gradlew build
 
+      - name: Delete sources jar
+        run: rm -rf build/libs/*-sources*.jar
+
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
