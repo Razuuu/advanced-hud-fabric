@@ -9,7 +9,7 @@
     "text.autoconfig.advancedhud.option.offsetLeft": "左侧偏移量",
     "text.autoconfig.advancedhud.option.holdKeyToShowFps": "“按键显示 HUD” 模式",
     "key.advancedhud.category": "Advanced-HUD",
-    "key.advancedhud.toggleFpsOverlay": "切换 HUD 覆盖层",
+    "key.advancedhud.toggleFpsOverlay": "切换 HUD 叠加层",
 
     "text.autoconfig.advancedhud.option.fps": "FPS",
     "text.autoconfig.advancedhud.option.coordinates": "坐标",
