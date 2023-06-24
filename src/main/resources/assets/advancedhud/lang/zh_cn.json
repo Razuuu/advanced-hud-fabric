@@ -1,0 +1,17 @@
+{
+    "text.autoconfig.advancedhud.title": "Advanced-HUD",
+    "text.autoconfig.advancedhud.option.enabled": "启用",
+    "text.autoconfig.advancedhud.option.drawWithShadows": "文本阴影",
+    "text.autoconfig.advancedhud.option.textSpacing": "文本间距",
+    "text.autoconfig.advancedhud.option.textColor": "文本颜色",
+    "text.autoconfig.advancedhud.option.textAlpha": "文本透明度",
+    "text.autoconfig.advancedhud.option.offsetTop": "顶部位置偏移",
+    "text.autoconfig.advancedhud.option.offsetLeft": "左部位置偏移",
+    "text.autoconfig.advancedhud.option.holdKeyToShowFps": "“按键显示 HUD” 模式",
+    "key.advancedhud.category": "Advanced-HUD",
+    "key.advancedhud.toggleFpsOverlay": "切换 HUD 覆盖层",
+
+    "text.autoconfig.advancedhud.option.fps": "FPS",
+    "text.autoconfig.advancedhud.option.coordinates": "坐标",
+    "text.autoconfig.advancedhud.option.ping": "Ping"
+}
