@@ -1,7 +1,6 @@
 plugins {
     id 'fabric-loom'
-    id 'com.matthewprenger.cursegradle' version '1.4.0'
-    id "com.modrinth.minotaur" version "1.2.1"
+    id "com.modrinth.minotaur" version "2.+"
     id 'maven-publish'
 }
 
@@ -92,44 +91,18 @@ def getShortMcVersion() {
     return project.minecraft_version.substring(0, 4)
 }
 
-task publishModrinth(type: com.modrinth.minotaur.TaskModrinthUpload) {
-    onlyIf {
-        ENV.MODRINTH_TOKEN
-    }
-
-    token = ENV.MODRINTH_TOKEN
-    projectId = 'x'
-    versionNumber = "${project.mod_version}+${getShortMcVersion()}"
-    versionName = "[${getShortMcVersion()}] Advanced-HUD v${project.mod_version}"
-    versionType = "RELEASE"
-
+modrinth {
+    token = System.getenv("MODRINTH_TOKEN")
+    projectId = "n73PVNjl"
+    versionName = "Advanced HUD ${project.mod_version} for ${project.minecraft_version}"
+    changelog = "A changelog can be found at https://github.com/Razuuu/advanced-hud-fabric/commits/${getShortMcVersion()}"
+    versionNumber = "${project.mod_version}+${project.minecraft_version}"
+    versionType = "release"
     uploadFile = remapJar
-    addGameVersion("${project.minecraft_version}")
-    addLoader('fabric')
-}
-
-curseforge {
-    if (ENV.CURSEFORGE_TOKEN) {
-        apiKey = ENV.CURSEFORGE_TOKEN
-    }
-
-    project {
-        id = "x"
-        changelog = "A changelog can be found at https://github.com/Razuuu/advanced-hud-fabric/commits/"
-        releaseType = "release"
-        addGameVersion "${project.minecraft_version}"
-        addGameVersion "Fabric"
-
-        mainArtifact(remapJar) {
-            displayName = "[${getShortMcVersion()}] Advanced-HUD v${project.mod_version}"
-        }
-
-        afterEvaluate {
-            uploadTask.dependsOn("remapJar")
-        }
-    }
-
-    options {
-        forgeGradleIntegration = false
+    gameVersions = ["${project.minecraft_version}"]
+    loaders = ["fabric"]
+    dependencies {
+        required.project "fabric-api"
+        optional.version "modmenu", "7.1.0"
     }
 }
