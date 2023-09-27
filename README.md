@@ -1,6 +1,7 @@
 ## Advanced HUD - Fabric Edition
 [![Automatic Release](https://github.com/Razuuu/advanced-hud-fabric/actions/workflows/release.yaml/badge.svg)](https://github.com/Razuuu/advanced-hud-fabric/actions/workflows/release.yaml)
 [![Github All Releases](https://img.shields.io/github/downloads/Razuuu/advanced-hud-fabric/total.svg)]()
+[![Modrinth downloads](https://img.shields.io/modrinth/dt/n73PVNjl?logo=modrinth&label=Modrinth&color=00AF5C)](https://modrinth.com/mod/advanced-hud)
 
 A [Fabric](https://fabricmc.net/) HUD mod (FPS, Coordinates and Ping)
 
