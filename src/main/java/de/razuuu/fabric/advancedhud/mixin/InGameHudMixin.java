@@ -22,7 +22,7 @@ public class InGameHudMixin {
         MinecraftClient client = MinecraftClient.getInstance();
         AdvancedHudConfig config = AdvancedHudMod.CONFIG;
 
-        if (!client.options.debugEnabled && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_HUD_OVERLAY && client.player != null) {
+        if (!client.options.hudHidden && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_HUD_OVERLAY && client.player != null) {
             double guiScale = client.getWindow().getScaleFactor();
 
             List<String> textLines = List.of(
