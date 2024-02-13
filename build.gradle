@@ -103,6 +103,6 @@ modrinth {
     loaders = ["fabric"]
     dependencies {
         required.project "fabric-api"
-        optional.version "modmenu", "7.1.0"
+        optional.version "modmenu", "9.0.0"
     }
 }
