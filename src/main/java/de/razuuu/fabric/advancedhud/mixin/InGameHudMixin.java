@@ -22,11 +22,11 @@ import java.util.List;
 public class InGameHudMixin {
 
     @Inject(at = @At("TAIL"), method = "render")
-    public void render(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) throws Exception {
+    public void render(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
         MinecraftClient client = MinecraftClient.getInstance();
         AdvancedHudConfig config = AdvancedHudMod.CONFIG;
 
-        if (!client.options.hudHidden && config.enabled && config.textAlpha > 3 && AdvancedHudMod.SHOW_HUD_OVERLAY && client.player != null) {
+        if (Utils.shouldRenderHud(client)) {
             double guiScale = client.getWindow().getScaleFactor();
 
             List<String> textLines = getStrings(config, client);
