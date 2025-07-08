@@ -1,4 +1,4 @@
-package de.razuuu.fabric.advancedhud.config;
+package de.razuuu.advancedhud.common.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

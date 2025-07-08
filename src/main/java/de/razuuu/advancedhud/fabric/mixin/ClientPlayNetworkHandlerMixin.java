@@ -1,8 +1,8 @@
-package de.razuuu.fabric.advancedhud.mixin;
+package de.razuuu.advancedhud.fabric.mixin;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
-import de.razuuu.fabric.advancedhud.Utils;
+import de.razuuu.advancedhud.common.Utils;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.DebugHud;
 import net.minecraft.client.network.ClientPlayNetworkHandler;

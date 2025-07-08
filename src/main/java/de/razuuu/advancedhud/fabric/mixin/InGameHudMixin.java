@@ -1,8 +1,8 @@
-package de.razuuu.fabric.advancedhud.mixin;
+package de.razuuu.advancedhud.fabric.mixin;
 
-import de.razuuu.fabric.advancedhud.AdvancedHudMod;
-import de.razuuu.fabric.advancedhud.Utils;
-import de.razuuu.fabric.advancedhud.config.AdvancedHudConfig;
+import de.razuuu.advancedhud.fabric.AdvancedHudMod;
+import de.razuuu.advancedhud.common.Utils;
+import de.razuuu.advancedhud.common.config.AdvancedHudConfig;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;

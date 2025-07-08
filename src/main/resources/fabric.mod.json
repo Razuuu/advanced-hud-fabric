@@ -17,10 +17,10 @@
     "environment": "client",
     "entrypoints": {
         "client": [
-            "de.razuuu.fabric.advancedhud.AdvancedHudMod"
+            "de.razuuu.advancedhud.fabric.AdvancedHudMod"
         ],
         "modmenu": [
-            "de.razuuu.fabric.advancedhud.config.ModMenuIntegration"
+            "de.razuuu.advancedhud.common.config.ModMenuIntegration"
         ]
     },
     "mixins": [

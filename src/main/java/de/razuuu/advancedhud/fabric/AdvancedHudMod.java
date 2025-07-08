@@ -1,6 +1,6 @@
-package de.razuuu.fabric.advancedhud;
+package de.razuuu.advancedhud.fabric;
 
-import de.razuuu.fabric.advancedhud.config.AdvancedHudConfig;
+import de.razuuu.advancedhud.common.config.AdvancedHudConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;

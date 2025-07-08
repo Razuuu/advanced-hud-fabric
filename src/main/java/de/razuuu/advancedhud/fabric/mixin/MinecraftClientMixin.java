@@ -1,4 +1,4 @@
-package de.razuuu.fabric.advancedhud.mixin;
+package de.razuuu.advancedhud.fabric.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import org.spongepowered.asm.mixin.Mixin;

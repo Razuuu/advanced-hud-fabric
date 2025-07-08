@@ -1,6 +1,7 @@
-package de.razuuu.fabric.advancedhud;
+package de.razuuu.advancedhud.common;
 
-import de.razuuu.fabric.advancedhud.config.AdvancedHudConfig;
+import de.razuuu.advancedhud.common.config.AdvancedHudConfig;
+import de.razuuu.advancedhud.fabric.AdvancedHudMod;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayNetworkHandler;
 import net.minecraft.client.network.PlayerListEntry;

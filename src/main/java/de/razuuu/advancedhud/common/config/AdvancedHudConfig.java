@@ -1,4 +1,4 @@
-package de.razuuu.fabric.advancedhud.config;
+package de.razuuu.advancedhud.common.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
