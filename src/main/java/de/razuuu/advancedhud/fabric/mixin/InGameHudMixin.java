@@ -53,7 +53,7 @@ public class InGameHudMixin {
         List<String> textLines = new ArrayList<>();
 
         if (config.enableFpsHud) {
-            textLines.add(config.fps + ((MinecraftClientMixin) client).getCurrentFPS());
+            textLines.add(config.fps + ((MinecraftClientAccessor) client).getCurrentFps());
         }
 
         if (config.enableCoordinatesHud) {
