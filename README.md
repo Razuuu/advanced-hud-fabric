@@ -1,3 +1,8 @@
+#
+#
+**Mod archived, please use [SimpleHUD](https://modrinth.com/mod/simplehud/) -Mod instead.**
+#
+#
 ## Advanced HUD - Fabric Edition
 [![Automatic Release](https://github.com/Razuuu/advanced-hud-fabric/actions/workflows/release.yaml/badge.svg)](https://github.com/Razuuu/advanced-hud-fabric/actions/workflows/release.yaml)
 [![Github All Releases](https://img.shields.io/github/downloads/Razuuu/advanced-hud-fabric/total.svg)]()
